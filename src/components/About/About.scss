@@ -1,0 +1,6 @@
+@use "../../styles/Utilities.scss" as u;
+
+.About {
+  display: flex;
+  padding-top: u.$navbar-height;
+}

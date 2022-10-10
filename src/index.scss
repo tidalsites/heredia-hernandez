@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+body {
+  min-width: 100vw;
+  font-family: Merriweather-Light, system-ui, sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+// Fonts
+@font-face {
+  font-family: "Cinzel";
+  src: local("Cinzel"),
+    url("./fonts/Cinzel/Cinzel-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Cinzel-Bold";
+  src: local("Cinzel-Bold"),
+    url("./fonts/Cinzel/Cinzel-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: local("Merriweather"),
+    url("./fonts/Merriweather/Merriweather-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Merriweather-Light";
+  src: local("Merriweather-Light"),
+    url("./fonts/Merriweather/Merriweather-Light.ttf") format("truetype");
+  font-weight: normal;
+}

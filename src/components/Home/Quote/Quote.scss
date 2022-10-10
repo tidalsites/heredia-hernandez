@@ -1,0 +1,25 @@
+@use "../../../styles/Colors.scss" as c;
+@use "../../../styles/Utilities.scss" as u;
+
+.Quote {
+  background-color: c.$white;
+  border-top: 4px solid c.$white;
+  border-bottom: 4px solid c.$white;
+  background: radial-gradient(rgba(c.$blue, 0.75), c.$blue),
+    linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0.75));
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: u.$max-width;
+    margin-inline: auto;
+    padding: 5rem 1rem;
+
+    blockquote {
+      font-size: 2rem;
+      color: c.$white;
+      max-width: 50ch;
+      text-align: center;
+    }
+  }
+}

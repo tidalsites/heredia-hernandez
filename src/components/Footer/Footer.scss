@@ -1,0 +1,37 @@
+@use "../../styles/Colors.scss" as c;
+@use "../../styles/Utilities.scss" as u;
+
+.Footer {
+  background-color: c.$black;
+  color: c.$white;
+  border-top: 8px double c.$white;
+  border-bottom: 8px double c.$white;
+  width: 100vw;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: u.$max-width;
+    margin-inline: auto;
+    padding: 3rem u.$edges;
+  }
+
+  &__section {
+    &__header {
+      font-size: 1.1rem;
+      padding-block: 0.25rem;
+      border-bottom: 1px solid c.$white;
+      font-weight: bold;
+    }
+
+    &__content {
+      padding-block: 0.5rem;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+      }
+    }
+  }
+}

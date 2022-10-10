@@ -1,0 +1,23 @@
+@use "../../styles/Colors.scss" as c;
+@use "../../styles/Utilities.scss" as u;
+
+.ContactBar {
+  display: flex;
+  background-color: c.$gold;
+  color: c.$white;
+  padding-inline: u.$edges;
+
+  &__wrapper {
+    width: 100%;
+    max-width: u.$max-width;
+    margin-inline: auto;
+  }
+
+  &__smedia {
+    display: flex;
+    padding-block: 0.25rem;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

@@ -1,0 +1,147 @@
+@use "../../../styles/Colors.scss" as c;
+@use "../../../styles/Utilities.scss" as u;
+
+$faded-white: rgba(c.$white, 0.75);
+
+.Team {
+  display: flex;
+  background-image: url("../../../assets/background-decoration.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100vw;
+
+  &__wrapper {
+    width: 100%;
+    max-width: u.$max-width;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem;
+    padding-block: 3rem;
+  }
+
+  &__member {
+    background-color: c.$white;
+    display: flex;
+    flex-direction: column;
+    outline: 0.5rem double c.$white;
+    box-shadow: 0 0 0.5rem 0.75rem rgba(0, 0, 0, 0.25);
+    transition: all 350ms ease-in-out;
+
+    @media screen and (min-width: 30em) {
+      flex-direction: row;
+    }
+
+    &:hover {
+      gap: 1rem;
+      .Team__member__content {
+        width: auto;
+        height: auto;
+        opacity: 1;
+        margin-inline: 3rem;
+      }
+
+      .Team__member__img__overlay {
+        display: none;
+      }
+    }
+
+    &__img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      background-color: c.$blue;
+
+      &__overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(c.$black, 0.25);
+        display: grid;
+        place-content: center;
+        gap: 0.5rem;
+        padding-top: 75%;
+        color: c.$white;
+
+        @media (hover: none) {
+          display: none;
+        }
+
+        > svg {
+          color: $faded-white;
+          border-radius: 50%;
+          padding: 0.25rem;
+          border: 4px dotted $faded-white;
+          font-size: 3rem;
+          margin-inline: auto;
+          animation: slowPulse 10s linear infinite;
+        }
+      }
+
+      img {
+        max-width: 15em;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 30ch;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 350ms ease-in-out;
+
+      @media (hover: none) {
+        width: auto;
+        height: auto;
+        opacity: 1;
+        margin-inline: 3rem;
+      }
+
+      span {
+        font-size: 1.125rem;
+        font-weight: bold;
+        text-align: center;
+        margin-block: 1rem;
+        padding-block: 0.5rem;
+        border-bottom: 2px solid c.$blue;
+      }
+
+      p {
+        padding-block: 1rem;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@keyframes slowPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  2% {
+    transform: scale(1.25);
+  }
+  4% {
+    transform: scale(1);
+  }
+  6% {
+    transform: scale(1.25);
+  }
+
+  8% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
