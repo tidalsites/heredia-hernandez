@@ -1,0 +1,32 @@
+@use "../../../styles/Colors.scss" as c;
+@use "../../../styles/Utilities.scss" as u;
+
+.Firm {
+  border-top: 1rem double c.$blue;
+  padding: 1rem;
+  padding-top: 5rem;
+
+  &__wrapper {
+    background-color: c.$white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: u.$max-width;
+    margin-inline: auto;
+    padding: 3rem;
+
+    // span {
+    //   font-size: 1.75rem;
+    //   border-bottom: 4px solid c.$blue;
+    //   line-height: 2;
+    //   width: fit-content;
+    // }
+
+    p {
+      flex-grow: 1;
+      max-width: 60ch;
+      line-height: 1.5;
+    }
+  }
+}

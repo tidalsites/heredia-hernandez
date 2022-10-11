@@ -1,0 +1,23 @@
+@use "../../../styles/Colors.scss" as c;
+@use "../../../styles/Utilities.scss" as u;
+
+.PracticeAreasSection {
+  padding-inline: 1rem;
+  border-top: 1rem double c.$blue;
+
+  &__wrapper {
+    margin-block: 3rem;
+    padding: 1rem;
+    max-width: u.$max-width;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    ul {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+}

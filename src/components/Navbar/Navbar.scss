@@ -2,7 +2,7 @@
 @use "../../styles/Colors.scss" as c;
 
 .Navbar {
-  $min-width: 30em;
+  $min-width: 35em;
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -88,7 +88,7 @@
       display: grid;
       place-content: center;
       background-color: transparent;
-      color: c.$white;
+      color: c.$black;
       aspect-ratio: 1;
       min-width: 35px;
       padding-right: 0.5rem;

@@ -57,14 +57,22 @@ export const Footer: FC = () => {
               </li>
               <li>
                 <div>Saturday</div>
-                <div></div>
+                <div>Closed</div>
               </li>
             </ul>
           </div>
         </div>
         <div className="Footer__section">
           <div className="Footer__section__header">Locations</div>
-          <div className="Footer__section__content"></div>
+          <div className="Footer__section__content">Santo Domingo</div>
+        </div>
+        <div className="Footer__bottom">
+          <div className="Footer__bottom__copyright">
+            <span>&copy; Heredia-Hernandez 2022</span>
+          </div>
+          <div className="Footer__bottom__plug">
+            <a href="https://www.tidalsites.com">Created by Tidal Sites</a>
+          </div>
         </div>
       </div>
     </footer>
