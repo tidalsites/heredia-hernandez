@@ -1,13 +1,19 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
+
+// Images
 import logo from "../../assets/logo-hh-frameless.svg";
-import { ContactBar } from "../ContactBar/ContactBar";
 
 // Icons
 import MenuIcon from "@mui/icons-material/Menu";
 
+// Components
+import { MobileMenu } from "../MobileMenu/MobileMenu";
+import { ContactBar } from "../ContactBar/ContactBar";
+
 export const Navbar: FC = () => {
+  const [mobileMenu, setMobileMenu] = useState<boolean>(false);
   return (
     <div className="Navbar">
       <div className="Navbar__top">
@@ -36,12 +42,13 @@ export const Navbar: FC = () => {
         <div className="Navbar__menu">
           <button
             aria-label="Open mobile menu"
-            // onClick={() => setMobileMenu(true)}
+            onClick={() => setMobileMenu(true)}
           >
             <MenuIcon />
           </button>
         </div>
       </div>
+      {mobileMenu && <MobileMenu setMobileMenu={setMobileMenu} />}
     </div>
   );
 };
